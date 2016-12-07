@@ -1,0 +1,30 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="WebApplication1.SiteMaster" %>
+<%@ Import Namespace="WebApplication1" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <webopt:bundlereference runat="server" path="~/Content/main.css" />
+
+    <link href="Content/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <form runat="server">
+
+            <h1>Game Database Dashboard</h1>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+    </form>
+    <p>
+</body>
+</html>
